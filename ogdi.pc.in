@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: ogdi
+Description: Open Geographic Datastore Interface
+Version: @OGDI_VERSION@
+Cflags: -I${includedir}/ogdi @RPC_CFLAGS@
+Libs: -L${libdir} -logdi
+Libs.private: -lexpat -lz @RPC_LIBS@
+
