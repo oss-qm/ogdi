@@ -4,7 +4,7 @@
 
 Name:		ogdi%{ogdimajorver}
 Version:	4.1.0
-Release:	2%{?dist}
+Release:	2.1%{?dist}
 Summary:	Open Geographic Datastore Interface
 License:	BSD
 URL:		http://ogdi.sourceforge.net/
@@ -56,10 +56,6 @@ TCL wrapper for OGDI.
 
 %prep
 %setup -q -n %{sname}-%{version}
-
-# include documentation
-%{__cp} -p %{SOURCE1} .
-
 
 %build
 TOPDIR=`pwd`; TARGET=Linux; export TOPDIR TARGET
