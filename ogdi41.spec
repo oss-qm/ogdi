@@ -1,5 +1,4 @@
 %global		sname	ogdi
-%global		gittag	4_1_0
 %global		ogdimajorver 41
 %global		ogdi41instdir /usr/ogdi%{ogdimajorver}
 
@@ -9,13 +8,7 @@ Release:	2%{?dist}
 Summary:	Open Geographic Datastore Interface
 License:	BSD
 URL:		http://ogdi.sourceforge.net/
-# new project location is https://github.com/libogdi/ogdi
-Source0:	https://github.com/libogdi/ogdi/archive/%{sname}_%{gittag}.tar.gz
-Source1:	http://ogdi.sourceforge.net/ogdi.pdf
-Source2:	%{name}-pgdg-libs.conf
-# https://bugzilla.redhat.com/show_bug.cgi?id=1470896
-Patch0:		%{name}-4.1.0-sailer.patch
-Patch1:		%{name}-4.1.0-mkinstalldirs.patch
+Source0:	%{sname}-%{version}.tar.gz
 
 BuildRequires:	gcc
 BuildRequires:	unixODBC-devel
@@ -62,9 +55,7 @@ TCL wrapper for OGDI.
 
 
 %prep
-%setup -q -n %{sname}-%{sname}_%{gittag}
-%patch0 -p1
-%patch1 -p0
+%setup -q -n %{sname}-%{version}
 
 # include documentation
 %{__cp} -p %{SOURCE1} .
