@@ -13,7 +13,7 @@ Source0:	%{sname}-%{version}.tar.gz
 BuildRequires:	gcc
 BuildRequires:	unixODBC-devel
 BuildRequires:	zlib-devel
-BuildRequires:	expat-devel
+BuildRequires:	libexpat-devel
 BuildRequires:	tcl-devel
 BuildRequires:	libtirpc-devel
 
