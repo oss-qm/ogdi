@@ -58,5 +58,5 @@ $(STANDARD_TARGETS):
 
 
 mk_nonlocal_install_dirs:
-	$(MKINSTALLDIR) $(prefix) $(exec_prefix) $(INST_LIB) $(INST_BIN) $(INST_INCLUDE)
+	$(MKINSTALLDIR) $(INST_LIB) $(INST_BIN) $(INST_INCLUDE)
 
