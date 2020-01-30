@@ -124,7 +124,7 @@ int GDALBridgeInitialize( const char * pszTargetDir )
 
         if( pfnTest == NULL )
         {
-            sprintf( szPath, papszSOFilenames[iSOFile] );
+            strcpy( szPath, papszSOFilenames[iSOFile] );
             pfnTest = GBGetSymbol( szPath, "GDALOpen" );
         }
     }

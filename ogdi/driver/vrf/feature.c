@@ -1632,7 +1632,8 @@ char *vrf_get_ObjAttributes(table, row_pos)
 	  return NULL;
 	}
 	strcat(returnString,"{ ");
-	strcat(returnString,ptr1);
+	if (ptr1)
+	  strcat(returnString,ptr1);
 	strcat(returnString," } ");
 	free(ptr1);
       }    
@@ -1661,7 +1662,8 @@ char *vrf_get_ObjAttributes(table, row_pos)
 	  return NULL;
 	}
 	strcat(returnString,"{ ");
-	strcat(returnString,ptr1);
+	if (ptr1)
+	  strcat(returnString,ptr1);
 	strcat(returnString," } ");
 	free(ptr1);
       }    
